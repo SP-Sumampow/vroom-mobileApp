@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "HeticProject.app"
-               BlueprintName = "HeticProject"
-               ReferencedContainer = "container:HeticProject.xcodeproj">
+               BuildableName = "vroomMobileAppParent.app"
+               BlueprintName = "vroomMobileAppParent"
+               ReferencedContainer = "container:vroomMobileAppParent.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "HeticProjectTests.xctest"
-               BlueprintName = "HeticProjectTests"
-               ReferencedContainer = "container:HeticProject.xcodeproj">
+               BuildableName = "vroomMobileAppParentTests.xctest"
+               BlueprintName = "vroomMobileAppParentTests"
+               ReferencedContainer = "container:vroomMobileAppParent.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "HeticProject.app"
-            BlueprintName = "HeticProject"
-            ReferencedContainer = "container:HeticProject.xcodeproj">
+            BuildableName = "vroomMobileAppParent.app"
+            BlueprintName = "vroomMobileAppParent"
+            ReferencedContainer = "container:vroomMobileAppParent.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "HeticProject.app"
-            BlueprintName = "HeticProject"
-            ReferencedContainer = "container:HeticProject.xcodeproj">
+            BuildableName = "vroomMobileAppParent.app"
+            BlueprintName = "vroomMobileAppParent"
+            ReferencedContainer = "container:vroomMobileAppParent.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

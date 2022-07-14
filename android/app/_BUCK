@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.heticproject",
+    package = "com.vroommobileappparent",
 )
 
 android_resource(
     name = "res",
-    package = "com.heticproject",
+    package = "com.vroommobileappparent",
     res = "src/main/res",
 )
 
