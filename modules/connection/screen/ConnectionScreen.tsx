@@ -1,4 +1,4 @@
-import {View} from 'react-native';
+import {SafeAreaView, View} from 'react-native';
 import React, {useCallback} from 'react';
 import {Box} from 'native-base';
 import SendConnectionButton from '../components/SendConnectionButton/SendConnectionButton';
@@ -12,10 +12,16 @@ export default function ConnectionScreen({navigation}: {navigation: any}) {
     navigation.navigate('Settings');
   }, [navigation]);
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <SafeAreaView
+      style={{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'pink',
+      }}>
       <VroomText styleText={styles.header} title={'Se connecter'} />
-      <Box>
-        <Box>
+      <View>
+        <View>
           <ConnectionForm
             placeholder={'E-mail'}
             label={'E-mail'}
@@ -26,10 +32,10 @@ export default function ConnectionScreen({navigation}: {navigation: any}) {
             label={'Mot de passe'}
             name={'Mot de passe'}
           />
-        </Box>
+        </View>
         {/* <Buttons onPress={() => navigation.navigate('Settings')}>coucou</Buttons> */}
         <SendConnectionButton onPress={handleOnClick} title={'Se connecter'} />
-      </Box>
-    </View>
+      </View>
+    </SafeAreaView>
   );
 }
