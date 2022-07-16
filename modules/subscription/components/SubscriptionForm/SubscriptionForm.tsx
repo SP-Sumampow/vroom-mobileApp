@@ -45,6 +45,17 @@ const SubscriptionForm = () => {
         <VroomText
           style={{marginTop: 20}}
           styleText={styles.titleH3}
+          title={'Password'}
+        />
+        <View style={subscriptionFormStyles.formInput}>
+          <NameIcon />
+          <Input variant={'underlined'} placeholder={'Votre mot de passe'} />
+        </View>
+      </View>
+      <View style={subscriptionFormStyles.formInput}>
+        <VroomText
+          style={{marginTop: 20}}
+          styleText={styles.titleH3}
           title={'Email'}
         />
         <View style={subscriptionFormStyles.formInput}>
