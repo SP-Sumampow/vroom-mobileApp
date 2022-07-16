@@ -3,6 +3,7 @@ import React, {useCallback} from 'react';
 import Menu from '../components/Menu/Menu';
 import SearchDestination from '../components/SearchDestination/SearchDestination';
 import HomePageButtonTakeSubscription from '../Buttons/HomePageButton-takeSubscription';
+import AllFavoriteType from '../components/FavoriteList/components/FavoriteType/AllFavoriteType';
 
 // @ts-ignore
 
@@ -25,6 +26,7 @@ export default function HomePageScreen({navigation}: {navigation: any}) {
         placeholder={'Adresse de votre course'}
         label={'Où allons-nous ?'}
       />
+      <AllFavoriteType />
       {/*<Buttons onPress={() => navigation.navigate('Settings')}>coucou</Buttons> */}
       <HomePageButtonTakeSubscription onPress={handleOnClick} />
     </SafeAreaView>

@@ -6,6 +6,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     width: 134,
     height: 134,
+    marginHorizontal: 4,
+    borderRadius: 8,
   },
   favoriteTypeBoxText: {
     color: colors.textColors.textWhite,
