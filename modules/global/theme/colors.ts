@@ -9,6 +9,7 @@ export const colors = {
     textBlack: '#000',
     textWhite: '#fff',
     textPurple: '#ab39e2',
+    textGrey: '#939393',
   },
   alertColor: {
     alertError: {

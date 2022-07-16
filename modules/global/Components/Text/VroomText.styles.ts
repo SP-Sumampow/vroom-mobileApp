@@ -4,6 +4,7 @@ import {colors} from '../../theme/colors';
 export const styles = StyleSheet.create({
   header: {
     fontSize: 32,
+    fontWeight: 'bold',
     color: colors.textColors.textBlack,
   },
   headerPurple: {
@@ -22,6 +23,7 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'grey',
+    fontWeight: 'bold',
   },
   regularText: {
     fontSize: 16,

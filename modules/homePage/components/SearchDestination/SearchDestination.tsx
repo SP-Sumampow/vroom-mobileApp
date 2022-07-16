@@ -2,14 +2,14 @@ import {View, Input} from 'native-base';
 import React from 'react';
 import VroomText from '../../../global/Components/Text/VroomText';
 import {styles} from '../../../global/Components/Text/VroomText.styles';
-import {connectionFormStyles} from './ConnectionForm.styles';
-import {ConnectionFormProps} from './ConnectionForm.type';
+import {searchDestinationStyles} from './SearchDestination.styles';
+import {SearchDestinationProps} from './SearchDestination.type';
 
-const ConnectionForm = ({label, name, placeholder}: ConnectionFormProps) => {
+const SearchDestination = ({label, placeholder}: SearchDestinationProps) => {
   // @ts-ignore
   // @ts-ignore
   return (
-    <View>
+    <View style={{width: '90%'}}>
       <VroomText
         style={{marginTop: 20}}
         styleText={styles.titleH3}
@@ -17,12 +17,11 @@ const ConnectionForm = ({label, name, placeholder}: ConnectionFormProps) => {
       />
       <Input
         variant={'underlined'}
-        style={connectionFormStyles.formInput}
-        name={name}
+        style={searchDestinationStyles.formInput}
         placeholder={placeholder}
       />
     </View>
   );
 };
 
-export default ConnectionForm;
+export default SearchDestination;

@@ -7,9 +7,9 @@ import {VroomTextProps} from './VroomText.type';
 //import {StyleSheet, Text, useColorScheme, View} from 'react-native';
 //import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const VroomText = ({styleText, title}: VroomTextProps) => {
+const VroomText = ({styleText, style, title}: VroomTextProps) => {
   //const isDarkMode = {useColorScheme() === 'dark';
-  return <Text style={styleText}>{title}</Text>;
+  return <Text style={[styleText, style]}>{title}</Text>;
 };
 
 export default VroomText;

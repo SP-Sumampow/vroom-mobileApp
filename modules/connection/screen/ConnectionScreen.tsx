@@ -1,10 +1,12 @@
 import {SafeAreaView, View} from 'react-native';
 import React, {useCallback} from 'react';
-import {Box} from 'native-base';
 import SendConnectionButton from '../components/SendConnectionButton/SendConnectionButton';
 import ConnectionForm from '../components/Form/ConnectionForm';
 import VroomText from '../../global/Components/Text/VroomText';
 import {styles} from '../../global/Components/Text/VroomText.styles';
+
+// @ts-ignore
+import LogoPurple from '../../../assets/svg/logo-vroomPurple.svg';
 
 export default function ConnectionScreen({navigation}: {navigation: any}) {
   const handleOnClick = useCallback(() => {
@@ -16,11 +18,15 @@ export default function ConnectionScreen({navigation}: {navigation: any}) {
       style={{
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'pink',
+        justifyContent: 'flex-start',
       }}>
-      <VroomText styleText={styles.header} title={'Se connecter'} />
-      <View>
+      <LogoPurple style={{marginTop: 40, marginBottom: 40}} />
+      <View style={{height: '60%'}}>
+        <VroomText
+          style={{textAlign: 'center', marginVertical: 20}}
+          styleText={styles.header}
+          title={'Se connecter'}
+        />
         <View>
           <ConnectionForm
             placeholder={'E-mail'}
