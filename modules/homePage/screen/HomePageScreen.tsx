@@ -12,6 +12,8 @@ export default function HomePageScreen({navigation}: {navigation: any}) {
     console.log('hey');
     navigation.navigate('Settings');
   }, [navigation]);
+
+  console.log('test');
   return (
     <SafeAreaView
       style={{
