@@ -11,7 +11,7 @@ export default function InscriptionSuccedScreen({
 }) {
   const handleOnClick = useCallback(() => {
     console.log('hey');
-    navigation.navigate('Settings');
+    navigation.navigate('HomePage');
   }, [navigation]);
   return (
     <SafeAreaView

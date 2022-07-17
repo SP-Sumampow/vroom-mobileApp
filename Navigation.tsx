@@ -17,7 +17,7 @@ import SettingsScreen from './modules/settings/screens/SettingsScreen';
 import PictureTestScreen from './modules/test/screen/PictureTestScreen';
 import SubscriptionScreen from './modules/subscription/screen/SubscriptionScreen';
 import HomePageScreen from './modules/homePage/screen/HomePageScreen';
-import InscriptionSuccedScreen from './modules/inscriptionSucced/screen/InscriptionSucced';
+import InscriptionSuccedScreen from './modules/inscriptionSucced/screen/InscriptionSuccedScreen';
 import {createNavigationContainerRef} from '@react-navigation/native';
 import useUserStore from './stores/User/UserStore';
 
