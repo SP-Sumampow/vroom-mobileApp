@@ -7,7 +7,6 @@ import {ConnectionFormProps} from './ConnectionForm.type';
 
 const ConnectionForm = ({
   label,
-  name,
   placeholder,
   onChange,
   secureTextEntry = false,
@@ -25,7 +24,6 @@ const ConnectionForm = ({
         variant={'underlined'}
         secureTextEntry={secureTextEntry}
         style={connectionFormStyles.formInput}
-        name={name}
         onChangeText={val => onChange(val)}
         placeholder={placeholder}
       />

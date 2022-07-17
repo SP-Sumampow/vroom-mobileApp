@@ -13,14 +13,17 @@ import './i18n';
 import {NativeBaseProvider} from 'native-base';
 import Navigation from './Navigation';
 import {UserProvider} from './providers/User/UserProvider';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 const App = () => {
   return (
-    <NativeBaseProvider>
-      <UserProvider>
-        <Navigation />
-      </UserProvider>
-    </NativeBaseProvider>
+    <SafeAreaProvider>
+      <NativeBaseProvider>
+        <UserProvider>
+          <Navigation />
+        </UserProvider>
+      </NativeBaseProvider>
+    </SafeAreaProvider>
   );
 };
 

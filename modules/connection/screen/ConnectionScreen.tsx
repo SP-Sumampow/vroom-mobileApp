@@ -139,7 +139,6 @@ export default function ConnectionScreen({navigation}: {navigation: any}) {
                 onChange={onChange}
                 placeholder={'E-mail'}
                 label={'E-mail'}
-                name={'E-mail'}
               />
             )}
             name="email"
@@ -153,7 +152,6 @@ export default function ConnectionScreen({navigation}: {navigation: any}) {
                 onChange={onChange}
                 placeholder={'Mot de passe'}
                 label={'Mot de passe'}
-                name={'Mot de passe'}
               />
             )}
             name="password"

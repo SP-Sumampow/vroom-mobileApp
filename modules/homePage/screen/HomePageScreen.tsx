@@ -9,10 +9,13 @@ import AllFavoriteType from '../components/FavoriteList/components/FavoriteType/
 
 //{navigation}: {navigation: any}
 export default function HomePageScreen({navigation}: {navigation: any}) {
-  const handleOnClick = useCallback(() => {
-    console.log('hey');
-    navigation.navigate('Settings');
+  const handleOnClick = useCallback(() => {}, [navigation]);
+
+  const handleMenuPress = useCallback(() => {
+    navigation.navigate('Menu');
   }, [navigation]);
+
+  const handleNotificationPress = useCallback(() => {}, []);
 
   return (
     <SafeAreaView
@@ -22,7 +25,10 @@ export default function HomePageScreen({navigation}: {navigation: any}) {
         alignItems: 'center',
         justifyContent: 'flex-start',
       }}>
-      <Menu />
+      <Menu
+        onMenuPress={handleMenuPress}
+        onNotificationPress={handleNotificationPress}
+      />
       <SearchDestination
         placeholder={'Adresse de votre course'}
         label={'Où allons-nous ?'}
