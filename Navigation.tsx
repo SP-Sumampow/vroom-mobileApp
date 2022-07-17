@@ -8,8 +8,7 @@
  * @format
  */
 
-import React, {useEffect} from 'react';
-
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ConnectionScreen from './modules/connection/screen/ConnectionScreen';
@@ -19,11 +18,8 @@ import SubscriptionScreen from './modules/subscription/screen/SubscriptionScreen
 import HomePageScreen from './modules/homePage/screen/HomePageScreen';
 import {createNavigationContainerRef} from '@react-navigation/native';
 import useUserStore from './stores/User/UserStore';
-<<<<<<< HEAD
-=======
-import LandingPageScreen from './modules/landingPage/screen/LandingPageScreen';
->>>>>>> e8f372e (add menu)
 import MenuPageScreen from './modules/menuPage/screen/MenuPageScreen';
+import LandingPageScreen from './modules/landingPage/screen/LandingPageScreen';
 
 const DEFAULT_OPTIONS = {headerShown: false};
 
@@ -73,15 +69,11 @@ const Navigation = () => {
           component={PictureTestScreen}
           options={{...DEFAULT_OPTIONS}}
         />
-<<<<<<< HEAD
-
-=======
         <Stack.Screen
           name="LandingPageScreen"
           component={LandingPageScreen}
           options={{...DEFAULT_OPTIONS}}
         />
->>>>>>> e8f372e (add menu)
         <Stack.Group screenOptions={{presentation: 'modal'}}>
           <Stack.Screen
             name="Menu"

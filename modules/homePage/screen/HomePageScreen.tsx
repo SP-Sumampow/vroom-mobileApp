@@ -1,4 +1,4 @@
-import {SafeAreaView} from 'react-native';
+import {Linking, SafeAreaView} from 'react-native';
 import React, {useCallback} from 'react';
 import Menu from '../components/Menu/Menu';
 import SearchDestination from '../components/SearchDestination/SearchDestination';
@@ -9,7 +9,9 @@ import AllFavoriteType from '../components/FavoriteList/components/FavoriteType/
 
 //{navigation}: {navigation: any}
 export default function HomePageScreen({navigation}: {navigation: any}) {
-  const handleOnClick = useCallback(() => {}, [navigation]);
+  const handleOnClick = useCallback(async () => {
+    await Linking.openURL('https://vroom-hetic.web.app/price');
+  }, []);
 
   const handleMenuPress = useCallback(() => {
     navigation.navigate('Menu');
