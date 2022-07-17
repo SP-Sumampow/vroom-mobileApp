@@ -2,7 +2,7 @@ import {SafeAreaView, ImageBackground} from 'react-native';
 import React, {useCallback} from 'react';
 import InscriptionSuccedButton from '../components/InscriptionSuccedButtonPart/InscriptionSuccedButtonPart';
 import {styles} from '../components/InscriptionSuccedButtonPart/ InscriptionSuccedButtonPart.styles';
-import InscriptionSuccedText from '../components/InscriptionSuccedTextPart/InscriptionSuccedTextPart';
+import InscriptionSuccedTextPart from '../components/InscriptionSuccedTextPart/InscriptionSuccedTextPart';
 
 export default function InscriptionSuccedScreen({
   navigation,
@@ -21,7 +21,7 @@ export default function InscriptionSuccedScreen({
         justifyContent: 'flex-start',
         backgroundColor: '#da84fa',
       }}>
-      <InscriptionSuccedText />
+      <InscriptionSuccedTextPart />
       <ImageBackground
         style={styles.InscriptionSuccedButtonImage}
         source={require('../../../assets/png/inscriptionSucced-boy.png')}>

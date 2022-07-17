@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import {styles} from './InscriptionSuccedTextPart.styles';
 import VroomText from '../../../global/Components/Text/VroomText';
@@ -7,7 +7,7 @@ import VroomText from '../../../global/Components/Text/VroomText';
 import LogoWhite from '../../../../assets/svg/vroomLogoWhite.svg';
 
 // @ts-ignore
-const InscriptionSuccedText = () => {
+const InscriptionSuccedTextPart = () => {
   //const isDarkMode = {useColorScheme() === 'dark';
   return (
     <View style={styles.InscriptionSuccedTextPart}>
@@ -26,5 +26,4 @@ const InscriptionSuccedText = () => {
     </View>
   );
 };
-
-export default InscriptionSuccedText;
+export default InscriptionSuccedTextPart;

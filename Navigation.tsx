@@ -17,12 +17,9 @@ import SettingsScreen from './modules/settings/screens/SettingsScreen';
 import PictureTestScreen from './modules/test/screen/PictureTestScreen';
 import SubscriptionScreen from './modules/subscription/screen/SubscriptionScreen';
 import HomePageScreen from './modules/homePage/screen/HomePageScreen';
-<<<<<<< HEAD
 import InscriptionSuccedScreen from './modules/inscriptionSucced/screen/InscriptionSucced';
-=======
 import {createNavigationContainerRef} from '@react-navigation/native';
 import useUserStore from './stores/User/UserStore';
->>>>>>> 130113f08459b0db66dc4646353df145a10fde99
 
 const Stack = createNativeStackNavigator();
 
@@ -44,12 +41,16 @@ const Navigation = () => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="Subscription">
+      <Stack.Navigator initialRouteName="InscriptionSucced">
         <Stack.Screen name="Connection" component={ConnectionScreen} />
-        <Stack.Screen name="HomePage" component={InscriptionSuccedScreen} />
+        <Stack.Screen name="HomePage" component={HomePageScreen} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
         <Stack.Screen name="Subscription" component={SubscriptionScreen} />
-        <Stack.Screen name="PictureTestScreen" component={PictureTestScreen} />
+        <Stack.Screen name="PictureTest" component={PictureTestScreen} />
+        <Stack.Screen
+          name="InscriptionSucced"
+          component={InscriptionSuccedScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
