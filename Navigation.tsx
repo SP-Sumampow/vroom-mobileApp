@@ -35,6 +35,7 @@ export const navigationRef = createNavigationContainerRef();
 
 const Navigation = () => {
   const id = useUserStore(state => state.id);
+  const resetStore = useUserStore(state => state.resetStore);
 
   useEffect(() => {
     if (id) {
@@ -49,7 +50,7 @@ const Navigation = () => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="Subscription">
+      <Stack.Navigator initialRouteName="Connection">
         <Stack.Screen
           name="Connection"
           component={ConnectionScreen}

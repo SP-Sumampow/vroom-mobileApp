@@ -1,6 +1,6 @@
 import {SafeAreaView} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import SubscriptionForm from '../components/SubscriptionForm/SubscriptionForm';
 import VroomText from '../../global/Components/Text/VroomText';
 import {styles} from '../../global/Components/Text/VroomText.styles';
@@ -24,11 +24,11 @@ export default function SubscriptionScreen({navigation}: {navigation: any}) {
 
       setIsLoading(true);
       const {success, error} = await customerService.signUp(
-        firstName,
-        lastName,
-        email,
-        password,
-        phone,
+        firstName.toLowerCase(),
+        lastName.toLowerCase(),
+        email.toLowerCase(),
+        password.toLowerCase(),
+        phone.toLowerCase(),
       );
       setIsLoading(false);
 

@@ -3,10 +3,14 @@ import React from 'react';
 import {styles} from './SendConnectionButton.styles';
 import {ButtonProps} from './SendConnectionButton.type';
 
-const SendConnectionButton = ({onPress, title}: ButtonProps) => {
+const SendConnectionButton = ({onPress, title, isLoading}: ButtonProps) => {
   //const isDarkMode = {useColorScheme() === 'dark';
   return (
-    <Button style={styles.buttonSendConnection} onPress={onPress}>
+    <Button
+      isLoading={isLoading}
+      isDisabled={isLoading}
+      style={styles.buttonSendConnection}
+      onPress={onPress}>
       <Text style={styles.buttonSendConnectionText}>{title}</Text>
     </Button>
   );
