@@ -33,7 +33,7 @@ export default function HomePageScreen({navigation}: {navigation: any}) {
         placeholder={'Adresse de votre course'}
         label={'Où allons-nous ?'}
       />
-      <AllFavoriteType />
+      <AllFavoriteType style={{height: 134}} />
       {/*<Buttons onPress={() => navigation.navigate('Settings')}>coucou</Buttons> */}
       <HomePageButtonTakeSubscription onPress={handleOnClick} />
     </SafeAreaView>
