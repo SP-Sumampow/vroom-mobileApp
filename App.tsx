@@ -9,14 +9,14 @@
  */
 
 import React from 'react';
-
+import './i18n';
 import {NativeBaseProvider} from 'native-base';
 import Navigation from './Navigation';
 
 const App = () => {
   return (
     <NativeBaseProvider>
-      <Navigation></Navigation>
+      <Navigation />
     </NativeBaseProvider>
   );
 };
