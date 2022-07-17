@@ -20,6 +20,7 @@ import HomePageScreen from './modules/homePage/screen/HomePageScreen';
 import InscriptionSuccedScreen from './modules/inscriptionSucced/screen/InscriptionSuccedScreen';
 import {createNavigationContainerRef} from '@react-navigation/native';
 import useUserStore from './stores/User/UserStore';
+import LandingPageScreen from './modules/landingPage/screen/LandingPageScreen';
 
 const DEFAULT_OPTIONS = {headerShown: false};
 
@@ -51,7 +52,7 @@ const Navigation = () => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="Connection">
+      <Stack.Navigator initialRouteName="LandingPageScreen">
         <Stack.Screen
           name="Connection"
           component={ConnectionScreen}
@@ -75,6 +76,11 @@ const Navigation = () => {
         <Stack.Screen
           name="PictureTestScreen"
           component={PictureTestScreen}
+          options={{...DEFAULT_OPTIONS}}
+        />
+        <Stack.Screen
+          name="LandingPageScreen"
+          component={LandingPageScreen}
           options={{...DEFAULT_OPTIONS}}
         />
       </Stack.Navigator>
