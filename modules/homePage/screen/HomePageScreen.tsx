@@ -1,4 +1,4 @@
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import React, {useCallback} from 'react';
 import Menu from '../components/Menu/Menu';
 import SearchDestination from '../components/SearchDestination/SearchDestination';
@@ -13,6 +13,7 @@ export default function HomePageScreen({navigation}: {navigation: any}) {
     console.log('hey');
     navigation.navigate('Settings');
   }, [navigation]);
+
   return (
     <SafeAreaView
       style={{
