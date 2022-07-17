@@ -12,11 +12,14 @@ import React from 'react';
 import './i18n';
 import {NativeBaseProvider} from 'native-base';
 import Navigation from './Navigation';
+import {UserProvider} from './providers/User/UserProvider';
 
 const App = () => {
   return (
     <NativeBaseProvider>
-      <Navigation />
+      <UserProvider>
+        <Navigation />
+      </UserProvider>
     </NativeBaseProvider>
   );
 };

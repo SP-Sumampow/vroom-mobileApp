@@ -1,5 +1,5 @@
 import {View, Input, useToast, Box} from 'native-base';
-import React, {useCallback} from 'react';
+import React, {useContext, useEffect} from 'react';
 import VroomText from '../../../global/Components/Text/VroomText';
 import {styles} from '../../../global/Components/Text/VroomText.styles';
 import {subscriptionFormStyles} from './SubscriptionForm.styles';
@@ -15,6 +15,8 @@ import SendSubscriptionButton from '../Button/sendSubscriptionButton/sendSubscri
 
 import {colors} from '../../../global/theme/colors';
 import {useTranslation} from 'react-i18next';
+import {userProvider} from '../../../../providers/User/UserProvider';
+import {SubscriptionFormProps} from './SubscriptionForm.type';
 
 type Inputs = {
   lastName: string;
@@ -24,14 +26,15 @@ type Inputs = {
   phone: string;
 };
 
-const SubscriptionForm = () => {
+const SubscriptionForm = ({onSubmit, isLoading}: SubscriptionFormProps) => {
   const {t} = useTranslation();
+  const {test} = useContext(userProvider);
   const {control, handleSubmit} = useForm<Inputs>();
   const toast = useToast();
-  const onSubmit = useCallback(data => {
-    console.log('success');
-    console.log(data);
-  }, []);
+
+  useEffect(() => {
+    console.log(test);
+  }, [test]);
 
   const onError: SubmitErrorHandler<Inputs> = errors => {
     const val = [
@@ -179,6 +182,7 @@ const SubscriptionForm = () => {
         </View>
       </View>
       <SendSubscriptionButton
+        isLoading={isLoading}
         onPress={handleSubmit(onSubmit, onError)}
         title={'S’inscrire'}
       />
