@@ -16,17 +16,7 @@ export default function SubscriptionScreen({navigation}: {navigation: any}) {
   const toast = useToast();
 
   const [isLoading, setIsLoading] = useState(false);
-  const id = useUserStore(state => state.id);
   const setUserData = useUserStore(state => state.setUserData);
-
-  useEffect(() => {
-    if (id) {
-      navigation.reset({
-        index: 0,
-        routes: [{name: 'HomePage'}],
-      });
-    }
-  }, [id, navigation]);
 
   const onSubmit = useCallback(
     async data => {

@@ -3,4 +3,5 @@ export type UserStoreType = {
   token?: string;
   refreshToken?: string;
   setUserData: (id: string, token: string, refreshToken: string) => void;
+  resetStore: () => void;
 };

@@ -8,7 +8,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -17,12 +17,29 @@ import SettingsScreen from './modules/settings/screens/SettingsScreen';
 import PictureTestScreen from './modules/test/screen/PictureTestScreen';
 import SubscriptionScreen from './modules/subscription/screen/SubscriptionScreen';
 import HomePageScreen from './modules/homePage/screen/HomePageScreen';
+import {createNavigationContainerRef} from '@react-navigation/native';
+import useUserStore from './stores/User/UserStore';
 
 const Stack = createNativeStackNavigator();
 
+export const navigationRef = createNavigationContainerRef();
+
 const Navigation = () => {
+  const id = useUserStore(state => state.id);
+
+  useEffect(() => {
+    if (id) {
+      if (navigationRef.isReady()) {
+        navigationRef.reset({
+          index: 0,
+          routes: [{name: 'HomePage'}],
+        });
+      }
+    }
+  }, [id]);
+
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator initialRouteName="Subscription">
         <Stack.Screen name="Connection" component={ConnectionScreen} />
         <Stack.Screen name="HomePage" component={HomePageScreen} />
