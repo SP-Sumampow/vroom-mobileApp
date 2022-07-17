@@ -8,7 +8,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ConnectionScreen from './modules/connection/screen/ConnectionScreen';
@@ -38,16 +38,16 @@ const Navigation = () => {
   const id = useUserStore(state => state.id);
   const resetStore = useUserStore(state => state.resetStore);
 
-  // useEffect(() => {
-  //   if (id) {
-  //     if (navigationRef.isReady()) {
-  //       navigationRef.reset({
-  //         index: 0,
-  //         routes: [{name: 'HomePage'}],
-  //       });
-  //     }
-  //   }
-  // }, [id]);
+  useEffect(() => {
+    if (id) {
+      if (navigationRef.isReady()) {
+        navigationRef.reset({
+          index: 0,
+          routes: [{name: 'HomePage'}],
+        });
+      }
+    }
+  }, [id]);
 
   return (
     <NavigationContainer ref={navigationRef}>

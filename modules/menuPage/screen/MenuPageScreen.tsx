@@ -15,6 +15,26 @@ export default function MenuPageScreen({navigation}: {navigation: any}) {
     navigation.navigate('Settings');
   }, [navigation]);
 
+  const handleMyAccountPressed = useCallback(() => {
+    console.log('my account');
+  }, []);
+
+  const handleChildrenPressed = useCallback(() => {
+    console.log('children');
+  }, []);
+
+  const handlePaiementPressed = useCallback(() => {
+    console.log('paiement');
+  }, []);
+
+  const handleNeedHelpPressed = useCallback(() => {
+    console.log('need help');
+  }, []);
+
+  const handleRiderPressed = useCallback(() => {
+    console.log('ride');
+  }, []);
+
   const handleClosePressed = useCallback(() => {
     navigation.pop();
   }, [navigation]);
@@ -38,11 +58,17 @@ export default function MenuPageScreen({navigation}: {navigation: any}) {
             <ClosedButton />
           </TouchableOpacity>
         </View>
-        <MenuList />
+        <MenuList
+          onMyAccount={handleMyAccountPressed}
+          onChildren={handleChildrenPressed}
+          onPayment={handlePaiementPressed}
+          onNeedHelp={handleNeedHelpPressed}
+        />
       </View>
-      <View>
-        <DriverButton onPress={handleOnClick} title={'Je suis un chauffeur'} />
-      </View>
+      <DriverButton
+        onPress={handleRiderPressed}
+        title={'Je suis un chauffeur'}
+      />
     </SafeAreaView>
   );
 }

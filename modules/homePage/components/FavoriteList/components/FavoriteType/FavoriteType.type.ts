@@ -1,8 +1,10 @@
 import {ImageSourcePropType, ViewProps} from 'react-native';
 
+export type AllFavoriteTypeProps = {} & ViewProps;
+
 export type FavoriteTypeProps = {
-  image: ImageSourcePropType;
   title: string;
+  image: ImageSourcePropType;
 } & ViewProps;
 
 export type FavoriteItemType = {

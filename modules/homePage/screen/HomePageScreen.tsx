@@ -35,6 +35,7 @@ export default function HomePageScreen({navigation}: {navigation: any}) {
         placeholder={'Adresse de votre course'}
         label={'Où allons-nous ?'}
       />
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
       <AllFavoriteType style={{height: 134}} />
       {/*<Buttons onPress={() => navigation.navigate('Settings')}>coucou</Buttons> */}
       <HomePageButtonTakeSubscription onPress={handleOnClick} />

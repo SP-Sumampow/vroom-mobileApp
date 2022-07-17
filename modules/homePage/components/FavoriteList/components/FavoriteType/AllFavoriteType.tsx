@@ -1,8 +1,8 @@
 import React, {useCallback} from 'react';
 import {FlatList, TouchableOpacity, View} from 'react-native';
 import FavoriteType from './FavoriteType';
-import {FavoriteItemType, FavoriteTypeProps} from './FavoriteType.type';
-const AllFavoriteType = ({style}: FavoriteTypeProps) => {
+import {AllFavoriteTypeProps, FavoriteItemType} from './FavoriteType.type';
+const AllFavoriteType = ({style}: AllFavoriteTypeProps) => {
   const handleFavoritePressed = useCallback(
     (index: number) => () => {
       console.log(index);
