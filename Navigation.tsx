@@ -21,6 +21,15 @@ import InscriptionSuccedScreen from './modules/inscriptionSucced/screen/Inscript
 import {createNavigationContainerRef} from '@react-navigation/native';
 import useUserStore from './stores/User/UserStore';
 
+const DEFAULT_OPTIONS = {headerShown: false};
+
+// const BACK_NAVIGATION = {
+//   headerShown: Platform.OS === 'ios',
+//   headerLeftLabelVisible: false,
+//   title: '',
+//   headerLeft: props => <Button />,
+// };
+
 const Stack = createNativeStackNavigator();
 
 export const navigationRef = createNavigationContainerRef();
@@ -41,15 +50,31 @@ const Navigation = () => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="InscriptionSucced">
-        <Stack.Screen name="Connection" component={ConnectionScreen} />
-        <Stack.Screen name="HomePage" component={HomePageScreen} />
-        <Stack.Screen name="Settings" component={SettingsScreen} />
-        <Stack.Screen name="Subscription" component={SubscriptionScreen} />
-        <Stack.Screen name="PictureTest" component={PictureTestScreen} />
+      <Stack.Navigator initialRouteName="Subscription">
         <Stack.Screen
-          name="InscriptionSucced"
-          component={InscriptionSuccedScreen}
+          name="Connection"
+          component={ConnectionScreen}
+          options={{...DEFAULT_OPTIONS}}
+        />
+        <Stack.Screen
+          name="HomePage"
+          component={HomePageScreen}
+          options={{...DEFAULT_OPTIONS}}
+        />
+        <Stack.Screen
+          name="Settings"
+          component={SettingsScreen}
+          options={{...DEFAULT_OPTIONS}}
+        />
+        <Stack.Screen
+          name="Subscription"
+          component={SubscriptionScreen}
+          options={{...DEFAULT_OPTIONS}}
+        />
+        <Stack.Screen
+          name="PictureTestScreen"
+          component={PictureTestScreen}
+          options={{...DEFAULT_OPTIONS}}
         />
       </Stack.Navigator>
     </NavigationContainer>
