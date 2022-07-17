@@ -17,7 +17,6 @@ import SettingsScreen from './modules/settings/screens/SettingsScreen';
 import PictureTestScreen from './modules/test/screen/PictureTestScreen';
 import SubscriptionScreen from './modules/subscription/screen/SubscriptionScreen';
 import HomePageScreen from './modules/homePage/screen/HomePageScreen';
-import InscriptionSuccedScreen from './modules/inscriptionSucced/screen/InscriptionSuccedScreen';
 import {createNavigationContainerRef} from '@react-navigation/native';
 import useUserStore from './stores/User/UserStore';
 import MenuPageScreen from './modules/menuPage/screen/MenuPageScreen';
@@ -52,7 +51,7 @@ const Navigation = () => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="Menu">
+      <Stack.Navigator initialRouteName="LandingPageScreen">
         <Stack.Screen
           name="Connection"
           component={ConnectionScreen}
@@ -78,6 +77,7 @@ const Navigation = () => {
           component={PictureTestScreen}
           options={{...DEFAULT_OPTIONS}}
         />
+
         <Stack.Group screenOptions={{presentation: 'modal'}}>
           <Stack.Screen
             name="Menu"
