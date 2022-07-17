@@ -2,6 +2,9 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../theme/colors';
 
 export const styles = StyleSheet.create({
+  keyboardScroll: {
+    flex: 1,
+  },
   header: {
     fontSize: 32,
     fontWeight: 'bold',

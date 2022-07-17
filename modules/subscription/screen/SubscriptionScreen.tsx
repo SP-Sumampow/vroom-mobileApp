@@ -1,4 +1,5 @@
-import {SafeAreaView, View} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import React, {useCallback} from 'react';
 import SubscriptionForm from '../components/SubscriptionForm/SubscriptionForm';
 import VroomText from '../../global/Components/Text/VroomText';
@@ -21,11 +22,13 @@ export default function SubscriptionScreen({navigation}: {navigation: any}) {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <LogoPurple style={{marginTop: 40, marginBottom: 40}} />
-      <VroomText title={"S'inscrire"} styleText={styles.header} />
-      <SubscriptionForm />
-      {/*<Buttons onPress={() => navigation.navigate('Settings')}>coucou</Buttons> */}
-      <SendSubscriptionButton onPress={handleOnClick} title={'S’inscrire'} />
+      <KeyboardAwareScrollView style={styles.keyboardScroll}>
+        <LogoPurple style={{marginTop: 40, marginBottom: 40}} />
+        <VroomText title={"S'inscrire"} styleText={styles.header} />
+        <SubscriptionForm />
+        {/*<Buttons onPress={() => navigation.navigate('Settings')}>coucou</Buttons> */}
+        <SendSubscriptionButton onPress={handleOnClick} title={'S’inscrire'} />
+      </KeyboardAwareScrollView>
     </SafeAreaView>
   );
 }

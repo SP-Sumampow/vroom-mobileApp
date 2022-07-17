@@ -3,7 +3,6 @@ import React from 'react';
 import VroomText from '../../../global/Components/Text/VroomText';
 import {styles} from '../../../global/Components/Text/VroomText.styles';
 import {subscriptionFormStyles} from './SubscriptionForm.styles';
-import {SubscriptionFormProps} from './SubscriptionForm.type';
 
 // @ts-ignore
 import NameIcon from '../../../../assets/svg/name-icon.svg';
@@ -13,10 +12,6 @@ import EmailIcon from '../../../../assets/svg/email-icon.svg';
 import PhoneNumberIncon from '../../../../assets/svg/phoneNumber-icon.svg';
 
 const SubscriptionForm = () => {
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
   return (
     <View style={subscriptionFormStyles.allInput}>
       <View style={subscriptionFormStyles.formInput}>
