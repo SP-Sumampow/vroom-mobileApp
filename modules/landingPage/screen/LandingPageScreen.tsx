@@ -7,10 +7,14 @@ import {styles} from '../components/Button/LandingPageButton.styles';
 import LogoWhite from '../../../assets/svg/vroomLogoWhite.svg';
 
 export default function LandingPageScreen({navigation}: {navigation: any}) {
-  const handleOnClick = useCallback(() => {
-    console.log('hey');
-    navigation.navigate('HomePage');
+  const handleSignInOnClick = useCallback(() => {
+    navigation.navigate('Connection');
   }, [navigation]);
+
+  const handleSignUpOnClick = useCallback(() => {
+    navigation.navigate('Subscription');
+  }, [navigation]);
+
   // @ts-ignore
   // @ts-ignore
   // @ts-ignore
@@ -26,20 +30,20 @@ export default function LandingPageScreen({navigation}: {navigation: any}) {
       <View style={{}}>
         <LandingPageButton
           variant={'outline'}
-          onPress={handleOnClick}
+          onPress={handleSignInOnClick}
           title={'Se connecter'}
           style={styles.landingPageButtonConnection}
           textStyle={styles.landingPageButtonTextWhite}
         />
         <LandingPageButton
-          onPress={handleOnClick}
+          onPress={handleSignUpOnClick}
           title={'S’inscrire'}
           style={styles.landingPageButtonSubscription}
           textStyle={styles.landingPageButtonTextPurple}
         />
         <LandingPageButton
           variant={'unstyled'}
-          onPress={handleOnClick}
+          onPress={handleSignUpOnClick}
           title={'S’inscrire'}
           style={styles.landingPageButtonConnection}
           textStyle={styles.landingPageButtonTextWhite}

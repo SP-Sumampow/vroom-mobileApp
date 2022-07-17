@@ -19,6 +19,10 @@ import SubscriptionScreen from './modules/subscription/screen/SubscriptionScreen
 import HomePageScreen from './modules/homePage/screen/HomePageScreen';
 import {createNavigationContainerRef} from '@react-navigation/native';
 import useUserStore from './stores/User/UserStore';
+<<<<<<< HEAD
+=======
+import LandingPageScreen from './modules/landingPage/screen/LandingPageScreen';
+>>>>>>> e8f372e (add menu)
 import MenuPageScreen from './modules/menuPage/screen/MenuPageScreen';
 
 const DEFAULT_OPTIONS = {headerShown: false};
@@ -38,25 +42,21 @@ const Navigation = () => {
   const id = useUserStore(state => state.id);
   const resetStore = useUserStore(state => state.resetStore);
 
-  useEffect(() => {
-    if (id) {
-      if (navigationRef.isReady()) {
-        navigationRef.reset({
-          index: 0,
-          routes: [{name: 'HomePage'}],
-        });
-      }
-    }
-  }, [id]);
+  // useEffect(() => {
+  //   if (id) {
+  //     if (navigationRef.isReady()) {
+  //       navigationRef.reset({
+  //         index: 0,
+  //         routes: [{name: 'HomePage'}],
+  //       });
+  //     }
+  //   }
+  // }, [id]);
 
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator initialRouteName="LandingPageScreen">
-        <Stack.Screen
-          name="Connection"
-          component={ConnectionScreen}
-          options={{...DEFAULT_OPTIONS}}
-        />
+        <Stack.Screen name="Connection" component={ConnectionScreen} />
         <Stack.Screen
           name="HomePage"
           component={HomePageScreen}
@@ -67,17 +67,21 @@ const Navigation = () => {
           component={SettingsScreen}
           options={{...DEFAULT_OPTIONS}}
         />
-        <Stack.Screen
-          name="Subscription"
-          component={SubscriptionScreen}
-          options={{...DEFAULT_OPTIONS}}
-        />
+        <Stack.Screen name="Subscription" component={SubscriptionScreen} />
         <Stack.Screen
           name="PictureTestScreen"
           component={PictureTestScreen}
           options={{...DEFAULT_OPTIONS}}
         />
+<<<<<<< HEAD
 
+=======
+        <Stack.Screen
+          name="LandingPageScreen"
+          component={LandingPageScreen}
+          options={{...DEFAULT_OPTIONS}}
+        />
+>>>>>>> e8f372e (add menu)
         <Stack.Group screenOptions={{presentation: 'modal'}}>
           <Stack.Screen
             name="Menu"
