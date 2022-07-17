@@ -17,6 +17,7 @@ import SettingsScreen from './modules/settings/screens/SettingsScreen';
 import PictureTestScreen from './modules/test/screen/PictureTestScreen';
 import SubscriptionScreen from './modules/subscription/screen/SubscriptionScreen';
 import HomePageScreen from './modules/homePage/screen/HomePageScreen';
+import InscriptionSuccedScreen from './modules/inscriptionSucced/screen/InscriptionSucced';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,7 +26,7 @@ const Navigation = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="HomePage">
         <Stack.Screen name="Connection" component={ConnectionScreen} />
-        <Stack.Screen name="HomePage" component={HomePageScreen} />
+        <Stack.Screen name="HomePage" component={InscriptionSuccedScreen} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
         <Stack.Screen name="Subscription" component={SubscriptionScreen} />
         <Stack.Screen name="PictureTestScreen" component={PictureTestScreen} />

@@ -11,6 +11,9 @@ export const colors = {
     textPurple: '#ab39e2',
     textGrey: '#939393',
   },
+  backgroundGolors: {
+    purple: '#da84fa',
+  },
   alertColor: {
     alertError: {
       alertError100: '#f0e7f8',
