@@ -16,27 +16,19 @@ import SendSubscriptionButton from '../Button/sendSubscriptionButton/sendSubscri
 import {colors} from '../../../global/theme/colors';
 import {useTranslation} from 'react-i18next';
 import {userProvider} from '../../../../providers/User/UserProvider';
-import {SubscriptionFormProps} from './SubscriptionForm.type';
-
-type Inputs = {
-  lastName: string;
-  firstName: string;
-  password: string;
-  email: string;
-  phone: string;
-};
+import {SignUpInputs, SubscriptionFormProps} from './SubscriptionForm.type';
 
 const SubscriptionForm = ({onSubmit, isLoading}: SubscriptionFormProps) => {
   const {t} = useTranslation();
   const {test} = useContext(userProvider);
-  const {control, handleSubmit} = useForm<Inputs>();
+  const {control, handleSubmit} = useForm<SignUpInputs>();
   const toast = useToast();
 
   useEffect(() => {
     console.log(test);
   }, [test]);
 
-  const onError: SubmitErrorHandler<Inputs> = errors => {
+  const onError: SubmitErrorHandler<SignUpInputs> = errors => {
     const val = [
       errors.firstName,
       errors.lastName,
@@ -126,8 +118,10 @@ const SubscriptionForm = ({onSubmit, isLoading}: SubscriptionFormProps) => {
               control={control}
               render={({field: {onChange}}) => (
                 <Input
+                  autoCapitalize="none"
                   variant={'underlined'}
                   placeholder={'Votre mot de passe'}
+                  secureTextEntry
                   onChangeText={val => onChange(val)}
                 />
               )}
@@ -148,6 +142,7 @@ const SubscriptionForm = ({onSubmit, isLoading}: SubscriptionFormProps) => {
               control={control}
               render={({field: {onChange}}) => (
                 <Input
+                  autoCapitalize="none"
                   variant={'underlined'}
                   placeholder={'Votre e-mail ici'}
                   onChangeText={val => onChange(val)}
@@ -170,6 +165,7 @@ const SubscriptionForm = ({onSubmit, isLoading}: SubscriptionFormProps) => {
               control={control}
               render={({field: {onChange}}) => (
                 <Input
+                  autoCapitalize="none"
                   variant={'underlined'}
                   placeholder={'Votre numéro ici'}
                   onChangeText={val => onChange(val)}

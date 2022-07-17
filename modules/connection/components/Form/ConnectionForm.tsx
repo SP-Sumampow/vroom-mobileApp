@@ -5,8 +5,13 @@ import {styles} from '../../../global/Components/Text/VroomText.styles';
 import {connectionFormStyles} from './ConnectionForm.styles';
 import {ConnectionFormProps} from './ConnectionForm.type';
 
-const ConnectionForm = ({label, name, placeholder}: ConnectionFormProps) => {
-  // @ts-ignore
+const ConnectionForm = ({
+  label,
+  name,
+  placeholder,
+  onChange,
+  secureTextEntry = false,
+}: ConnectionFormProps) => {
   // @ts-ignore
   return (
     <View>
@@ -16,9 +21,12 @@ const ConnectionForm = ({label, name, placeholder}: ConnectionFormProps) => {
         title={label}
       />
       <Input
+        autoCapitalize="none"
         variant={'underlined'}
+        secureTextEntry={secureTextEntry}
         style={connectionFormStyles.formInput}
         name={name}
+        onChangeText={val => onChange(val)}
         placeholder={placeholder}
       />
     </View>
